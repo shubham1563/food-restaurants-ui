@@ -38,28 +38,52 @@
     </nav>
 
     <div class="grid grid-cols-1 md:grid-cols-2 h-auto bg-red-500 text-white">
-        <div class="px-10 md:px-20 mt-10 md:mt-20">
-            <h1 class="font-bold text-3xl md:text-4xl">Only $12.99</h1>
-            <h1 class="font-bold text-5xl md:text-8xl">The Smokin Burger</h1>
+        <div class="px-10 md:px-20 mt-10 md:mt-20 animate-fadeInLeft">
+            <h1 class="font-bold text-3xl md:text-4xl animate-bounce">Only $12.99</h1>
+            <h1 class="font-bold text-5xl md:text-8xl animate-fadeInUp">The Smokin Burger</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 mt-8">
-                <div class="flex flex-col p-4 ml-0 md:ml-10 bg-orange-400 rounded-full w-28 h-28 md:w-36 md:h-36 text-center text-white text-3xl md:text-5xl font-bold">
+                <div class="flex flex-col p-4 ml-0 md:ml-10 bg-orange-400 rounded-full w-28 h-28 md:w-36 md:h-36 text-center text-white text-3xl md:text-5xl font-bold animate-pulse">
                     <span>20%</span>
                     <h1 class="text-xl md:text-2xl font-bold">DISCOUNT</h1>
                 </div>
-                <div class="text-white text-xl md:text-4xl font-semibold mt-5 md:mt-10">
+                <div class="text-white text-xl md:text-4xl font-semibold mt-5 md:mt-10 animate-fadeInRight">
                     On your first order, if you order online through our App...!
-                    <button class="mt-3 md:ml-10 font-light">
+                    <button class="mt-3 md:ml-10 font-light animate-bounce">
                         <span class="text-lg md:text-xl hover:bg-sky-300 hover:text-white bg-slate-100 text-red-400 px-3 md:px-5 h-8 md:h-10 rounded-xl">ORDER ONLINE</span>
                     </button>
                 </div>
             </div>
         </div>
-
-        <div class="flex justify-center mt-10 md:mt-20">
+    
+        <div class="flex justify-center mt-10 md:mt-20 animate-fadeInRight">
             <img src="images/burger.png" class="w-4/5 md:w-full" alt="Burger">
         </div>
     </div>
-
+    
+    <style>
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .animate-fadeInLeft {
+            animation: fadeInLeft 1s ease-out;
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out;
+        }
+        .animate-fadeInRight {
+            animation: fadeInRight 1s ease-out;
+        }
+    </style>
+    
     <div class="relative h-screen bg-cover bg-center mt-10" style="background-image: url('images/1.png');">
         <div class="grid grid-cols-1 md:grid-cols-2">
             <div></div>
@@ -73,6 +97,117 @@
             </div>
         </div>
     </div>
+
+    <div class="bg-white text-red-500 py-10">
+        <h2 class="text-4xl text-center font-bold mb-6">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-10">
+            <div class="bg-red-100 p-5 rounded-lg">
+                <p>"The Smokin Burger is the best I've ever had! The flavors are incredible."</p>
+                <p class="mt-4 font-semibold">-Mark Zuckerberg
+                    </p>
+            </div>
+            <div class="bg-red-100 p-5 rounded-lg">
+                <p>"Amazing food and quick service. Highly recommend ordering online."</p>
+                <p class="mt-4 font-semibold">- Sundar Pichai</p>
+            </div>
+            <div class="bg-red-100 p-5 rounded-lg">
+                <p>"The 20% discount made my day! Delicious burgers at a great price."</p>
+                <p class="mt-4 font-semibold">- Tim Cook</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="bg-red-600 text-white py-10">
+        <h2 class="text-4xl text-center font-bold mb-6">Special Offers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-10">
+            <div class="flex items-center">
+                <div class="bg-orange-400 p-5 rounded-lg text-center w-24 h-24">
+                    <h3 class="text-3xl font-bold">30%</h3>
+                    <p class="text-sm">OFF</p>
+                </div>
+                <p class="ml-5 text-xl">On all orders above $50</p>
+            </div>
+            <div class="flex items-center">
+                <div class="bg-orange-400 p-5 rounded-lg text-center w-24 h-24">
+                    <h3 class="text-3xl font-bold">FREE</h3>
+                    <p class="text-sm">Drink</p>
+                </div>
+                <p class="ml-5 text-xl">With every burger purchase</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-red-600 text-white py-10">
+        <h2 class="text-3xl text-center font-bold mb-6">Order Your Meal</h2>
+        <div class="max-w-xl mx-auto px-8">
+            <form action="#" method="post" class="space-y-4">
+                <div class="grid grid-cols-1 gap-4">
+                    <div>
+                        <label for="name" class="block text-md font-semibold mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder=" enter Your Name" class="p-3 rounded-md bg-white text-red-500 w-full focus:outline-none focus:ring-2 focus:ring-sky-300 text-sm">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-md font-semibold mb-1">Your Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="enter your phone number" class="p-3 rounded-md bg-white text-red-500 w-full focus:outline-none focus:ring-2 focus:ring-sky-300 text-sm">
+                    </div>
+                    <div>
+                        <label for="order" class="block text-md font-semibold mb-1">Your Order</label>
+                        <textarea id="order" name="order" rows="3" placeholder="E.g., 2x Smokin Burger, 1x Fries, 1x Soda" class="p-3 rounded-md bg-white text-red-500 w-full focus:outline-none focus:ring-2 focus:ring-sky-300 text-sm"></textarea>
+                    </div>
+                    <div>
+                        <label for="address" class="block text-md font-semibold mb-1">Delivery Address</label>
+                        <textarea id="address" name="address" rows="2" placeholder="Enter your Delivery Address" class="p-3 rounded-md bg-white text-red-500 w-full focus:outline-none focus:ring-2 focus:ring-sky-300 text-sm"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="mt-4 bg-slate-50 text-red-400 px-5 py-2 rounded-md hover:bg-sky-200 hover:text-white transition-colors duration-300 w-full text-sm">Place Order</button>
+            </form>
+        </div>
+    </div>
+    
+     
+    <footer class="bg-red-600 text-white py-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-10">
+            <div>
+                <h3 class="text-lg font-bold mb-4">About Us</h3>
+                <p>Fast Food Restaurant is dedicated to serving the best burgers with the freshest ingredients. Join us for a delicious meal, whether you dine in or order online!</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-sky-300">Home</a></li>
+                    <li><a href="#" class="hover:text-sky-300">Menu</a></li>
+                    <li><a href="#" class="hover:text-sky-300">Offers</a></li>
+                    <li><a href="#" class="hover:text-sky-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-sky-300">Facebook</a></li>
+                    <!-- <li><a href="#" class="hover:text-sky-300">Twitter</a></li> -->
+                    <li><a href="#" class="hover:text-sky-300">Instagram</a></li>
+                    <!-- <li><a href="#" class="hover:text-sky-300">LinkedIn</a></li> -->
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                <p>Email: info@fastfoodrestaurant.com</p>
+                <p>Phone: (+91) 4537268812</p>
+                <p>Address: 123 FC ROAD,PUNE City, Pune-Maharashtra</p>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-sm">
+            <p>&copy; 2024 Fast Food Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+
+
+
+    
+    
 
 </body>
 
